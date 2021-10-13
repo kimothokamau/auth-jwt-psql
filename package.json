@@ -26,13 +26,13 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "npm run dev",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sequelize": "sequelize",
     "sequelize-cli": "sequelize-cli",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "npm run start",
     "client": "react-scripts start",
     "server": "cd backend && node server",
     "dev": "concurrently \"npm run server\" \"npm run client\""
