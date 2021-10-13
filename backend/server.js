@@ -20,8 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // routes
-require('./backend/routes/auth.routes')(app);
-require('./backend/routes/user.routes')(app);
+require('./routes/auth.routes')(app);
+require('./routes/user.routes')(app);
 
 // Serve React build files in production
 if (process.env.NODE_ENV === 'production') {
@@ -41,9 +41,10 @@ if (process.env.NODE_ENV !== 'production') {
     res.status(201).json({});
   });
 }
+}
 
 // database
-const db = require("./backend/models");
+const db = require("./models");
 const Role = db.role;
 
 //db.sequelize.sync();
