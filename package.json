@@ -26,13 +26,16 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start && node server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sequelize": "sequelize",
     "sequelize-cli": "sequelize-cli",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "client": "react-scripts start",
+    "server": "cd backend && node server",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +60,7 @@
     "@babel/eslint-parser": "^7.15.7",
     "@babel/plugin-syntax-jsx": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
+    "concurrently": "^6.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.24.2",
