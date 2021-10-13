@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import Form from "react-validation/build/form";
-import Input from "react-validation/build/input";
-import CheckButton from "react-validation/build/button";
-import { isEmail } from "validator";
+import React, { Component } from 'react';
+import Form from 'react-validation/build/form';
+import Input from 'react-validation/build/input';
+import CheckButton from 'react-validation/build/button';
+import { isEmail } from 'validator';
 
-import AuthService from "../services/auth.service";
+import AuthService from '../services/auth.service';
 
-const required = value => {
+const required = (value) => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -16,7 +16,7 @@ const required = value => {
   }
 };
 
-const email = value => {
+const email = (value) => {
   if (!isEmail(value)) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -26,7 +26,7 @@ const email = value => {
   }
 };
 
-const vusername = value => {
+const vusername = (value) => {
   if (value.length < 3 || value.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -36,7 +36,7 @@ const vusername = value => {
   }
 };
 
-const vpassword = value => {
+const vpassword = (value) => {
   if (value.length < 6 || value.length > 40) {
     return (
       <div className="alert alert-danger" role="alert">
@@ -55,29 +55,29 @@ export default class Register extends Component {
     this.onChangePassword = this.onChangePassword.bind(this);
 
     this.state = {
-      username: "",
-      email: "",
-      password: "",
+      username: '',
+      email: '',
+      password: '',
       successful: false,
-      message: ""
+      message: '',
     };
   }
 
   onChangeUsername(e) {
     this.setState({
-      username: e.target.value
+      username: e.target.value,
     });
   }
 
   onChangeEmail(e) {
     this.setState({
-      email: e.target.value
+      email: e.target.value,
     });
   }
 
   onChangePassword(e) {
     this.setState({
-      password: e.target.value
+      password: e.target.value,
     });
   }
 
@@ -85,8 +85,8 @@ export default class Register extends Component {
     e.preventDefault();
 
     this.setState({
-      message: "",
-      successful: false
+      message: '',
+      successful: false,
     });
 
     this.form.validateAll();
@@ -95,27 +95,26 @@ export default class Register extends Component {
       AuthService.register(
         this.state.username,
         this.state.email,
-        this.state.password
+        this.state.password,
       ).then(
-        response => {
+        (response) => {
           this.setState({
             message: response.data.message,
-            successful: true
+            successful: true,
           });
         },
-        error => {
-          const resMessage =
-            (error.response &&
-              error.response.data &&
-              error.response.data.message) ||
-            error.message ||
-            error.toString();
+        (error) => {
+          const resMessage = (error.response
+              && error.response.data
+              && error.response.data.message)
+            || error.message
+            || error.toString();
 
           this.setState({
             successful: false,
-            message: resMessage
+            message: resMessage,
           });
-        }
+        },
       );
     }
   }
@@ -132,7 +131,7 @@ export default class Register extends Component {
 
           <Form
             onSubmit={this.handleRegister}
-            ref={c => {
+            ref={(c) => {
               this.form = c;
             }}
           >
@@ -185,8 +184,8 @@ export default class Register extends Component {
                 <div
                   className={
                     this.state.successful
-                      ? "alert alert-success"
-                      : "alert alert-danger"
+                      ? 'alert alert-success'
+                      : 'alert alert-danger'
                   }
                   role="alert"
                 >
@@ -195,8 +194,8 @@ export default class Register extends Component {
               </div>
             )}
             <CheckButton
-              style={{ display: "none" }}
-              ref={c => {
+              style={{ display: 'none' }}
+              ref={(c) => {
                 this.checkBtn = c;
               }}
             />
