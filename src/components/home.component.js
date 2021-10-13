@@ -20,10 +20,7 @@ export default class Home extends Component {
       },
       error => {
         this.setState({
-          content:
-            (error.response && error.response.data) ||
-            error.message ||
-            error.toString()
+          content: error.message.toString()
         });
       }
     );
