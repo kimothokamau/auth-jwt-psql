@@ -32,7 +32,7 @@
     "eject": "react-scripts eject",
     "sequelize": "sequelize",
     "sequelize-cli": "sequelize-cli",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "npm run dev",
     "client": "react-scripts start",
     "server": "cd backend && node server",
     "dev": "concurrently \"npm run server\" \"npm run client\""
