@@ -34,7 +34,7 @@
     "sequelize-cli": "sequelize-cli",
     "heroku-postbuild": "npm run start",
     "client": "react-scripts start",
-    "dev": "nodemon server\""
+    "dev": "nodemon server"
   },
   "eslintConfig": {
     "extends": [
