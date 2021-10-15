@@ -27,8 +27,5 @@ module.exports = {
         idle: 10000
       },
       "use_env_variable": "DATABASE_URL"
-      },
-
-    }
-  
-};
+      }
+  }
