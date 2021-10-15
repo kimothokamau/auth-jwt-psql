@@ -22,6 +22,7 @@
     "react-scripts": "4.0.3",
     "react-validation": "^3.0.7",
     "sequelize": "^6.7.0",
+    "sequelize-cli": "^6.2.0",
     "validator": "^13.6.0",
     "web-vitals": "^1.0.1"
   },
@@ -34,7 +35,8 @@
     "sequelize-cli": "sequelize-cli",
     "heroku-postbuild": "npm run dev",
     "client": "react-scripts start",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "migrate": "sequelize db:migrate"
   },
   "eslintConfig": {
     "extends": [
