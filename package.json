@@ -32,7 +32,7 @@
     "eject": "react-scripts eject",
     "sequelize": "sequelize",
     "sequelize-cli": "sequelize-cli",
-    "heroku-postbuild": "npm run start",
+    "heroku-postbuild": "npm run dev",
     "client": "react-scripts start",
     "dev": "nodemon server"
   },
@@ -70,5 +70,6 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
