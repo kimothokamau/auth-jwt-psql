@@ -35,12 +35,13 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize(process.env.DATABASE_URL);
 
 // const db = {};
+let db = {}
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 
-const db = require("./models");
+let db = require("./models");
 const Role = db.role;
 
 //db.sequelize.sync();
