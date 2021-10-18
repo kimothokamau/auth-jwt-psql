@@ -38,7 +38,8 @@ const sequelize = new Sequelize(psqlenv.database,psqlenv.user, psqlenv.password,
   host: psqlenv.host,
   dialect: 'postgres',
   dialectOptions: {
-    ssl: true
+    ssl: true,
+    rejectUnauthorized: false
   }
 });
 
