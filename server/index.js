@@ -9,6 +9,8 @@ const pool = new Pool({
     ssl: true
 });
 
+console.log(connectStr);
+
 const path = __dirname + '/views';
 const app = express();
 app.use(express.static(path));
@@ -27,6 +29,7 @@ require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
 
 // database
+
 const db = require("./models");
 const Role = db.role;
 
