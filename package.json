@@ -34,7 +34,7 @@
     "eject": "react-scripts eject",
     "sequelize": "sequelize",
     "sequelize-cli": "sequelize-cli",
-    "heroku-postbuild": "npm run start",
+    "heroku-postbuild": "npm run dev",
     "client": "react-scripts start",
     "dev": "nodemon server",
     "migrate": "sequelize db:migrate"
