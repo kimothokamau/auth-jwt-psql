@@ -4,10 +4,10 @@ const cors = require("cors");
 const {Pool} = require('pg');
 
 const connectStr = process.env.DATABASE_URL;
-const pool = new Pool({
-    connectionString: connectStr,
-    ssl: true
-});
+// const pool = new Pool({
+//     connectionString: connectStr,
+//     ssl: true
+// });
 
 console.log(connectStr);
 
@@ -29,6 +29,16 @@ require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
 
 // database
+const config = require("./config/db.config.js");
+
+const Sequelize = require("sequelize");
+const sequelize = new Sequelize(process.env.DATABASE_URL);
+
+const db = {};
+
+db.Sequelize = Sequelize;
+db.sequelize = sequelize;
+
 
 const db = require("./models");
 const Role = db.role;
