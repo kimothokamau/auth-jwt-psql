@@ -32,7 +32,8 @@ require('./routes/user.routes')(app);
 const config = require("./config/db.config.js");
 
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
+const psqlenv = require('./herokudb');
+const sequelize = new Sequelize(psqlenv.username,psqlenv.password, psqlenv.host, psqlenv.database, {
   dialect: 'postgres',
   protocol: 'postgres',
   dialectOptions: {
