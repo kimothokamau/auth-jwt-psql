@@ -32,7 +32,13 @@ require('./routes/user.routes')(app);
 const config = require("./config/db.config.js");
 
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize(process.env.DATABASE_URL);
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: 'postgres',
+  protocol: 'postgres',
+  dialectOptions: {
+    ssl: true
+  }
+});
 
 // const db = {};
 let db = {}
@@ -44,8 +50,6 @@ db.sequelize = sequelize;
 db = require("./models");
 const Role = db.role;
 
-//db.sequelize.sync();
-// force: true will drop the table if it already exists
 db.sequelize.sync();
 initial();
 
