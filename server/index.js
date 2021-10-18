@@ -33,7 +33,7 @@ const config = require("./config/db.config.js");
 
 const Sequelize = require("sequelize");
 const psqlenv = require('./herokudb');
-const sequelize = new Sequelize(psqlenv.username,psqlenv.password, psqlenv.host, psqlenv.database, {
+const sequelize = new Sequelize(psqlenv.username,psqlenv.password, psqlenv.host, psqlenv.database, psqlenv.dialect, {
   dialect: 'postgres',
   protocol: 'postgres',
   dialectOptions: {
