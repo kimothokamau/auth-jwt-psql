@@ -41,7 +41,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 
-let db = require("./models");
+db = require("./models");
 const Role = db.role;
 
 //db.sequelize.sync();
