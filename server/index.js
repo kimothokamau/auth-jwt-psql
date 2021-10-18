@@ -39,7 +39,7 @@ const sequelize = new Sequelize(psqlenv.database,psqlenv.username, psqlenv.passw
   dialect: 'postgres'
 });
 
-console.log(host);
+console.log(psqlenv.host);
 
 // const db = {};
 let db = {}
