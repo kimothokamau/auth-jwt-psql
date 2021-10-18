@@ -36,7 +36,10 @@ const psqlenv = require('./herokudb');
 const sequelize = new Sequelize(psqlenv.database,psqlenv.user, psqlenv.password,
   {
   host: psqlenv.host,
-  dialect: 'postgres'
+  dialect: 'postgres',
+  dialectOptions: {
+    ssl: true
+  }
 });
 
 console.log(psqlenv.host);
