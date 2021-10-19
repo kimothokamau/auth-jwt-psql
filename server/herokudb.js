@@ -4,6 +4,7 @@ const herokupsql = {
   host: 'ec2-44-195-240-222.compute-1.amazonaws.com',
   database: 'd5e43n9p6rg842',
   dialect: 'postgres',
+  port: '5432',
 }
 
 module.exports = herokupsql;
