@@ -55,8 +55,8 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 
-// db = require("./models");
-// const Role = db.role;
+db = require("./models");
+const Role = db.role;
 
 db.sequelize.sync();
 initial();
@@ -77,18 +77,18 @@ console.log('The value of PORT is:', PORT);
 });
 
  function initial() {
-//  Role.create({
-//   id: 1,
-//   name: "user"
-//  });
+ Role.create({
+  id: 1,
+  name: "user"
+ });
 
-//  Role.create({
-//   id: 2,
-//   name: "moderator"
-//  });
+ Role.create({
+  id: 2,
+  name: "moderator"
+ });
 
-//  Role.create({
-//   id: 3,
-//   name: "admin"
-//  });
+ Role.create({
+  id: 3,
+  name: "admin"
+ });
  }
