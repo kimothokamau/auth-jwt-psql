@@ -10,11 +10,19 @@ Coming soon !
 ## Built with
 
 - JavaScript/React
-- React-router, Axios
+- React-router-dom, axios
 - JWT Authentication
 - Form validation
 - CSS & Bootstrap
 - Webpack, babel
+- Postgres
+
+## Pre-requisites
+
+- PC with terminal
+- PostgreSQL
+- Node
+- Browser(chrome used in this demo)
 
 
 ## Setup
@@ -25,8 +33,8 @@ Coming soon !
 ## Usage
 
 - Run `npm install` on a Terminal to install the modules
-- Run `npm start` on a Terminal to start the server 
-- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Run `nodemon server` on a Terminal to start the server 
+- Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
 
 ## Authors

@@ -1,7 +1,6 @@
 {
   "name": "auth-jwt-psql",
   "version": "0.1.0",
-  "main": "server.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -11,7 +10,9 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "bootstrap": "^5.1.1",
+    "concurrently": "^6.3.0",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.7.1",
@@ -22,11 +23,12 @@
     "react-scripts": "4.0.3",
     "react-validation": "^3.0.7",
     "sequelize": "^6.7.0",
+    "sequelize-cli": "^6.2.0",
     "validator": "^13.6.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "npm run dev",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -34,8 +36,8 @@
     "sequelize-cli": "sequelize-cli",
     "heroku-postbuild": "node server",
     "client": "react-scripts start",
-    "server": "cd backend && node server",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "nodemon server",
+    "migrate": "sequelize db:migrate"
   },
   "eslintConfig": {
     "extends": [
@@ -60,16 +62,20 @@
     "@babel/eslint-parser": "^7.15.7",
     "@babel/plugin-syntax-jsx": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
-    "concurrently": "^6.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "nodemon": "^2.0.13",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
+  },
+  "proxy": "http://localhost:8080",
+  "engines": {
+    "node": "14.17.4"
   }
 }
