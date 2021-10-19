@@ -1,4 +1,4 @@
-{
+npm -v{
   "name": "auth-jwt-psql",
   "version": "0.1.0",
   "private": true,
@@ -76,6 +76,7 @@
   },
   "proxy": "http://localhost:8080",
   "engines": {
-    "node": "14.17.4"
+    "node": "14.17.4",
+    "npm": "7.21.1"
   }
 }
