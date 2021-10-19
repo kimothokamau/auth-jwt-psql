@@ -61,9 +61,13 @@ db.sequelize = sequelize;
 db.sequelize.sync();
 initial();
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "views", "index.html"));
+// });
+
+app.get('/', function (req, res) {
+  res.send('hello world')
+})
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
