@@ -55,8 +55,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 
-db = require("./models");
-const Role = db.role;
+// clear
 
 db.sequelize.sync();
 initial();
@@ -67,6 +66,10 @@ initial();
 
 app.get('/', function (req, res) {
   res.send('hello world')
+  if (err) {
+    console.log(err);
+    res.status(500).send(err);
+  }
 })
 
 // set port, listen for requests
@@ -77,18 +80,18 @@ console.log('The value of PORT is:', PORT);
 });
 
  function initial() {
- Role.create({
-  id: 1,
-  name: "user"
- });
+//  Role.create({
+//   id: 1,
+//   name: "user"
+//  });
 
- Role.create({
-  id: 2,
-  name: "moderator"
- });
+//  Role.create({
+//   id: 2,
+//   name: "moderator"
+//  });
 
- Role.create({
-  id: 3,
-  name: "admin"
- });
+//  Role.create({
+//   id: 3,
+//   name: "admin"
+//  });
  }
