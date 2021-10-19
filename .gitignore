@@ -11,7 +11,7 @@
 # production
 /build
 
-/server/herokudb.js
+server/herokudb.js
 
 # misc
 .DS_Store
