@@ -11,8 +11,6 @@
 # production
 /build
 
-server/herokudb.js
-
 # misc
 .DS_Store
 .env

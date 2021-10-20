@@ -34,8 +34,6 @@
     "eject": "react-scripts eject",
     "sequelize": "sequelize",
     "sequelize-cli": "sequelize-cli",
-    "heroku-postbuild": "node server",
-    "client": "react-scripts start",
     "dev": "nodemon server",
     "migrate": "sequelize db:migrate"
   },
@@ -74,8 +72,8 @@
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
   },
-  "proxy": "http://localhost:8080",
   "engines": {
-    "node": "14.17.4"
+    "node": "14.17.4",
+    "npm": "7.21.1"
   }
 }
