@@ -33,8 +33,10 @@ Coming soon !
 ## Usage
 
 - Run `npm install` on a Terminal to install the modules
-- Run `nodemon server` on a Terminal to start the server 
-- Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+- Run `node server` on a Terminal to start the backend node/express server
+- Run `npm install` on a Terminal to start the react frontend
+
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 ## Authors
