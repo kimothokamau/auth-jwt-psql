@@ -4,8 +4,8 @@ This project is about user authentication to enable registration, login and aloo
 
 
 ## Live demo
+[Link](http://satcollector.xyz/)
 
-Coming soon !
 
 ## Built with
 
